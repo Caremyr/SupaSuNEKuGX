@@ -53,6 +53,8 @@ class HowToPlayScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        
+        
         backgroundColor = .black
         
         nextPageLabel.fontName = "Grand9K Pixel"
@@ -196,6 +198,12 @@ class HowToPlayScene: SKScene {
         nowWallPowerUpDescription.preferredMaxLayoutWidth = size.width*0.7
         nowWallPowerUpDescription.numberOfLines = 0
         nowWallPowerUpDescription.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
+        
+        
+        if(UIDevice.modelName.contains("iPad")){
+            howToPlayLabel.removeFromParent()
+            generalHowToPlayGlobal.fontSize = size.width*0.053
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -258,6 +266,10 @@ class HowToPlayScene: SKScene {
             addChild(nextPageLabelShadow)
             addChild(generalHowToPlayGlobal)
             addChild(howToPlayLabel)
+            
+            if(UIDevice.modelName.contains("iPad")){
+                howToPlayLabel.removeFromParent()
+            }
         }
         
     }

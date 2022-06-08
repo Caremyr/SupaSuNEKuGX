@@ -111,6 +111,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var backgroundMusic: SKAudioNode = SKAudioNode(fileNamed: "Jeremy Blake - Powerup!")
     
     override init(size: CGSize) {
+        if(UIDevice.modelName.contains("iPad")){
+            print("Sto sull'ipad")
+        }
+        
+        
         if(UIDevice.modelName.contains("iPhone 8 Plus")){
             print("\(size.width) + \(size.height)")
             playableWidth = 384
