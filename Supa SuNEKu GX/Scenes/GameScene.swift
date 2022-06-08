@@ -382,8 +382,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         if(volume){
-            addChild(backgroundMusic)
-            backgroundMusic.run(.play())
+//            addChild(backgroundMusic)
+//            backgroundMusic.run(.play())
         }
         
         timerLabel.fontName = "Grand9K Pixel"
